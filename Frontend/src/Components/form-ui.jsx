@@ -1,10 +1,8 @@
 // src/FormUI.js
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import {
-  Container,
   Button,
-  Typography,
   Select,
   MenuItem,
   FormControl,
@@ -24,14 +22,6 @@ const FormUI = (props) => {
   const [result, setResult] = useState(null);
   const [overlayVisible, setOverlayVisible] = useState(false);
   const cardRef = useRef(null);
-
-  useEffect(() => {
-    const fetchPoints = async () => {
-      const response = await axios.post("http://localhost:8080/get-points");
-      setPoints(points);
-    };
-    fetchPoints();
-  }, []);
 
   const handleRollDice = async () => {
     const diceResponse = await axios.post("http://localhost:8080/roll-dice");

@@ -1,14 +1,7 @@
 import "./App.css";
 import FormUI from "./Components/form-ui";
 import Login from "./Components/auth/login/login";
-import {
-  BrowserRouter,
-  Router,
-  Routes,
-  Navigate,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 function App() {
   const navigate = useNavigate();
